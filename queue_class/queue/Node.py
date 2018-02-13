@@ -3,15 +3,15 @@ class Node:
         self.next = None
         self.value = value
         
-    def getData(self):
+    def get_data(self):
         return self.value
     
-    def setData(self, value):
+    def set_data(self, value):
         self.value = value
     
-    def getNextNode(self):
+    def get_next_node(self):
         return self.next
 
-    def setNextNode(self, node):
+    def set_next_node(self, node):
         self.next = node
 

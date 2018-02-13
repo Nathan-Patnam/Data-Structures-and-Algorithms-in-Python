@@ -12,20 +12,20 @@ class TestNode(unittest.TestCase):
         self.our_node = Node(10)
     
     def test_get_data(self):
-        self.assertEqual(10, self.our_node.getData())
+        self.assertEqual(10, self.our_node.get_data())
     
 
     def test_set_data(self):
-        self.assertEqual(10, self.our_node.getData())
-        self.our_node.setData(5)
-        self.assertEqual(5, self.our_node.getData())
+        self.assertEqual(10, self.our_node.get_data())
+        self.our_node.set_data(5)
+        self.assertEqual(5, self.our_node.get_data())
 
     
 
     def test_get_next_node(self):
         new_node = Node(6)
-        self.our_node.setNextNode(new_node)
-        self.assertEqual(self.our_node.getNextNode(), new_node)
+        self.our_node.set_next_node(new_node)
+        self.assertEqual(self.our_node.get_next_node(), new_node)
     
 
     
@@ -38,7 +38,7 @@ class TestQueue(unittest.TestCase):
         self.our_queue = Queue()
 
     def test_is_empty(self):
-        self.assertTrue(self.our_queue.isEmpty())
+        self.assertTrue(self.our_queue.is_empty())
 
 
     def test_enqueue(self):
@@ -48,7 +48,7 @@ class TestQueue(unittest.TestCase):
     
     def test_is_not_empty(self):
         self.our_queue.enqueue(5)
-        self.assertFalse(self.our_queue.isEmpty())
+        self.assertFalse(self.our_queue.is_empty())
     
 
     def test_dequeue(self):
@@ -64,7 +64,7 @@ class TestQueue(unittest.TestCase):
         self.our_queue.enqueue(5)
         self.our_queue.enqueue(8)
         self.our_queue.enqueue(5)
-        self.assertEqual(3, self.our_queue.sizeOf())
+        self.assertEqual(3, self.our_queue.size_of())
 
 
 
